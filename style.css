@@ -1,0 +1,118 @@
+* {
+    font-family: 'Bahnschrift', monospace;
+}
+#header_div {
+    width: 100%;
+    margin: auto;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #506586;
+}
+#main_div {
+    background-color: #304059;
+    border-radius: 8px;
+
+    margin: auto;  
+    margin-top: 70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    width: 550px;
+    border: 2px solid white;
+}
+#letter_div {
+    background-color: #141923CC;
+    border-radius: 5px;
+
+    margin: auto;
+    /* margin-top: 10px; */
+    margin-bottom: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 67px;
+    height: 80px;
+    font-size: 80px;
+}
+@keyframes bounce {
+    0% {
+        transform: scale(0.8) translateY(0); opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) translateY(0); opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateY(0); opacity: 1;
+    }
+}
+.bounce {
+    animation: bounce 0.2s ease;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+.shake {
+    animation: shake 0.2s ease;
+}
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.fade {
+    animation: fade 0.5s ease;
+}
+@keyframes slide {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+.slide {
+    animation: slide 0.5s ease;
+}
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+#stat_div {
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.8);
+    border-radius: 10px;
+    border: .5px solid rgb(255, 255, 255, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* margin: auto; */
+    
+    width: 620px;
+    visibility: hidden;
+}
+#stat {
+    background-color: rgb(255, 255, 255, 0.8);
+    border-radius: 5px;
+    width: 550px;
+    padding: 10px;
+}
