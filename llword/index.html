@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Last Letter Word </title>
+    <link rel="stylesheet" type="text/css" media="all" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="overlay"></div>
+    <div id="stat_div">
+        <div style="display:flex; align-items: center;">
+            <p style="font-size: 17px; color: white;"> YOU ENTERED&nbsp; </p>
+            <p id="score_2" style="font-size: 17px; color: white;">  </p>
+            <p style="font-size: 17px; color: white;"> &nbsp;WORD(S)! </p>
+        </div>
+        <div id="stat">
+            <p id="output"></p>
+        </div>
+        <p style="font-size: 17px; color: white;"> PRESS '=' TO PLAY AGAIN </p>
+    </div>
+    <div id="header_div">
+        <div style="display:flex; align-items: center; justify-content: space-between;">
+            <p style="font-size: 17px; color: rgb(255, 255, 255, 0.9); margin-bottom: 15px; margin-left: 3px;"> LAST LETTER WORD </p>
+            <div style="right: 0px; margin-right: 10px;">
+                <button onclick="darkblueColorProfile()" style="background-color: #304059; height: 25px; width: 25px; border-color: #141923; border-radius: 25px;"></button>
+                <button onclick="greenColorProfile()" style="background-color: #92DA7E; height: 25px; width: 25px; border-color: #72AD62; border-radius: 25px;"></button>
+                <button onclick="yellowColorProfile()" style="background-color: #D0C375; height: 25px; width: 25px; border-color: #938845; border-radius: 25px;"></button>
+                <button onclick="blueColorProfile()" style="background-color: #99B0D6; height: 25px; width: 25px; border-color: #5575A8; border-radius: 25px;"></button> 
+                <button onclick="redColorProfile()" style="background-color: #7E3838; height: 25px; width: 25px; border-color: #471B1B; border-radius: 25px;"></button>  
+                <button onclick="pinkColorProfile()" style="background-color: #C69DA6; height: 25px; width: 25px; border-color: #996A76; border-radius: 25px;"></button> 
+            </div>
+        </div>
+        <hr style="height: 1.5px; background-color:rgb(255, 255, 255, 0.9); border: 0;">
+    </div>
+    <div id="main_div">
+        <div style="display:flex; align-items: center;">
+            <p style="color: rgb(255, 255, 255, 0.9); font-size: 15px; margin-bottom: -20px;"> HIGH SCORE:&nbsp;</p>
+            <p id="high_score" style="color: rgb(255, 255, 255, 0.9); font-size: 15px; margin-bottom: -20px;"> 0 </p>
+        </div>
+        <div style="display:flex; align-items: center;">
+            <p style="color: rgb(255, 255, 255, 0.9); font-size: 25px; margin-top: 20px;"> SCORE:&nbsp;</p>
+            <p id="score" style="color: rgb(255, 255, 255, 0.9); font-size: 25px; margin-top: 20px;"> 0 </p>
+        </div>
+        <div id="letter_div">
+            <p id="letter" class="bounce" style="color: white; font-size: 40px;"></p>
+        </div>
+        <p id="error" class="bounce" style="color: rgb(214, 61, 61); font-size: 18px; visibility: hidden; margin-top: -10px; margin-bottom: -10px;"> INVALID WORD </p>
+        <p id="word" style="color: rgb(255, 255, 255, 0.5); font-size: 25px;"> Enter a word... </p>
+        <hr style="width: 90%; height: 1.5px; background-color:rgb(255, 255, 255, 0.9); border: 0; margin-top: -25px;">
+        
+        <p id="timer" style="color: rgb(255, 255, 255, 0.9); font-size: 28px; margin-top: 10px;"> 5.00 </p>
+    </div>
+</body>
+</html>
