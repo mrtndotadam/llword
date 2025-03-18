@@ -1,9 +1,12 @@
 * {
-    font-family: 'Bahnschrift', monospace;
+    font-family: 'Arial', monospace;
 }
 #header_div {
-    width: 100%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    margin-top: -5px;
+    margin-bottom: -10px;
 }
 body {
     display: flex;
@@ -13,11 +16,11 @@ body {
     background-color: #506586;
 }
 #main_div {
-    background-color: #304059;
-    border-radius: 8px;
+    background-color: #304059CC;
+    border-radius: 4px;
 
     margin: auto;  
-    margin-top: 70px;
+    margin-top: 25px;
 
     display: flex;
     flex-direction: column;
@@ -25,24 +28,22 @@ body {
     align-items: center;
     
     text-align: center;
-    width: 550px;
-    border: 2px solid white;
+    width: 425px;
 }
 #letter_div {
     background-color: #141923CC;
     border-radius: 5px;
 
     margin: auto;
-    /* margin-top: 10px; */
     margin-bottom: 40px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 67px;
-    height: 80px;
-    font-size: 80px;
+    width: 60px;
+    height: 70px;
+    /* font-size: 80px; */
 }
 @keyframes bounce {
     0% {
@@ -96,7 +97,7 @@ body {
 }
 #stat_div {
     position: absolute;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0, 0.6);
     border-radius: 10px;
     border: .5px solid rgb(255, 255, 255, 0.8);
 
@@ -104,15 +105,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    /* margin: auto; */
     
-    width: 620px;
+    width: 525px;
     visibility: hidden;
 }
 #stat {
     background-color: rgb(255, 255, 255, 0.8);
     border-radius: 5px;
-    width: 550px;
+    width: 475px;
     padding: 10px;
 }
