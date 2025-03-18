@@ -5,11 +5,11 @@ var time = 5.00;
 var inputText = "";
 const enterSound = new Audio('misc/enter.mp3');
 const errorSound = new Audio('misc/error.mp3');
-const tickSound = new Audio('misc/beep.mp3');
+const beepSound = new Audio('misc/beep.mp3');
 
 enterSound.load();
 errorSound.load();
-tickSound.load();
+beepSound.load();
 
 async function loadWords() {
     const response = await fetch("misc/words_alpha.txt");
@@ -144,14 +144,14 @@ function isUniqueWord(input) {
 function success() {
     enteredWords.add(inputText.toLowerCase());
     startTimer();
-    stopTick();
+    stopBeep();
     addScore();
     playEnter();
     triggerBounce("letter");
     triggerBounce("score");
     document.getElementById("letter").innerHTML = inputText.slice(-1).toUpperCase();
     document.getElementById("word").innerHTML = "Enter a word...";
-    document.getElementById("word").setAttribute("style", "color: rgb(255, 255, 255, 0.5); font-size: 25px;");
+    document.getElementById("word").setAttribute("style", "color: rgb(255, 255, 255, 0.5); font-size: 23px;");
     inputText = "";
 }
 
@@ -163,12 +163,12 @@ function playError() {
     errorSound.play();
 }
 
-function playTick() {
-    tickSound.play();
+function playBeep() {
+    beepSound.play();
 }
-function stopTick() {
-    tickSound.pause();
-    tickSound.currentTime = 0;
+function stopBeep() {
+    beepSound.pause();
+    beepSound.currentTime = 0;
 }
 
 function startTimer() {
@@ -181,9 +181,9 @@ function startTimer() {
         time -= 0.01;
         document.getElementById("timer").innerHTML = time.toFixed(2);
         if (time <= 2.20) {
-            playTick();
+            playBeep();
             if (time <= 0) {
-                stopTick();
+                stopBeep();
                 clearInterval(timer);
                 document.getElementById("timer").innerHTML = "0.00";
                 gameOver();
@@ -207,37 +207,48 @@ function gameOver() {
 
 function greenColorProfile() {
     document.body.style.backgroundColor = "#87BA79";
-    document.getElementById("letter_div").style.backgroundColor = "#3B4538CC";
-    document.getElementById("main_div").style.backgroundColor = "#5B7E51";
-    
+    document.getElementById("letter_div").style.backgroundColor = "#30382ECC";
+    document.getElementById("main_div").style.backgroundColor = "#5B7E51CC";
+    document.getElementById("header_hr").style.backgroundColor = "#5B7E51CC";
+    document.getElementById("main_hr").style.backgroundColor = "#3B4538CC";
 }
 
 function pinkColorProfile() {
     document.body.style.backgroundColor = "#BD929D";
     document.getElementById("letter_div").style.backgroundColor = "#604048CC";
-    document.getElementById("main_div").style.backgroundColor = "#926E77";
+    document.getElementById("main_div").style.backgroundColor = "#926E77CC";
+    document.getElementById("header_hr").style.backgroundColor = "#926E77CC";
+    document.getElementById("main_hr").style.backgroundColor = "#604048CC";
 }
 
 function darkblueColorProfile() {
     document.body.style.backgroundColor = "#506586";
     document.getElementById("letter_div").style.backgroundColor = "#141923CC";
-    document.getElementById("main_div").style.backgroundColor = "#304059";
+    document.getElementById("main_div").style.backgroundColor = "#304059CC";
+    document.getElementById("header_hr").style.backgroundColor = "#304059CC";
+    document.getElementById("main_hr").style.backgroundColor = "#141923CC";
 }
 
 function blueColorProfile() {
     document.body.style.backgroundColor = "#99B0D6";
     document.getElementById("letter_div").style.backgroundColor = "#29364BCC";
-    document.getElementById("main_div").style.backgroundColor = "#5575A8";
+    document.getElementById("main_div").style.backgroundColor = "#5575A8CC";
+    document.getElementById("header_hr").style.backgroundColor = "#5575A8CC";
+    document.getElementById("main_hr").style.backgroundColor = "#29364BCC";
 }
 
 function redColorProfile() {
     document.body.style.backgroundColor = "#CF4B4B";
     document.getElementById("letter_div").style.backgroundColor = "#471B1BCC";
-    document.getElementById("main_div").style.backgroundColor = "#7E3838";
+    document.getElementById("main_div").style.backgroundColor = "#7E3838CC";
+    document.getElementById("header_hr").style.backgroundColor = "#7E3838CC";
+    document.getElementById("main_hr").style.backgroundColor = "#471B1BCC";
 }
 
 function yellowColorProfile() {
     document.body.style.backgroundColor = "#D0C375";
     document.getElementById("letter_div").style.backgroundColor = "#4D4619";
-    document.getElementById("main_div").style.backgroundColor = "#938845";
+    document.getElementById("main_div").style.backgroundColor = "#938845CC";
+    document.getElementById("header_hr").style.backgroundColor = "#938845CC";
+    document.getElementById("main_hr").style.backgroundColor = "#4D4619";
 }
